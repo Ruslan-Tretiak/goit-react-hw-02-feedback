@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { FeedbackOptions } from './Feedback/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notifications/Notification';
+import { AppContainer } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -38,7 +39,7 @@ export class App extends Component {
     const options = ['good', 'neutral', 'bad'];
 
     return (
-      <div>
+      <AppContainer>
         
         <h1>Please leave feedback</h1>
         <section title='feedback'>
@@ -58,7 +59,7 @@ export class App extends Component {
         <Notification message="There is no feedback" />
         )
         }
-      </div>
+      </AppContainer>
     );
   };
 };
