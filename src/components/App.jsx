@@ -1,5 +1,3 @@
-// Ваш файл App.jsx
-
 import React, { Component } from 'react';
 import { FeedbackOptions } from './Feedback/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
