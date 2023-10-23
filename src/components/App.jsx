@@ -3,6 +3,7 @@ import { FeedbackOptions } from './Feedback/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notifications/Notification';
 import { AppContainer } from './App.styled';
+import { Section } from './Section/Section';
 
 export class App extends Component {
   state = {
@@ -40,11 +41,11 @@ export class App extends Component {
       <AppContainer>
         
         <h1>Please leave feedback</h1>
-        <section title='feedback'>
+        <Section>
           <FeedbackOptions options={options} onLeaveFeedback={this.handleFeedback} />
-        </section>
+        </Section>
         {total > 0 ? (
-        <section title='statistics'>
+        <Section>
           <Statistics
             good={good}
             neutral={neutral}
@@ -52,7 +53,7 @@ export class App extends Component {
             total={total}
             positivePercentage={positivePercentage}
           />
-        </section>
+        </Section>
         ):(
         <Notification message="There is no feedback" />
         )
